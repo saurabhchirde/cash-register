@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Document</title>
-</head>
-<body></section>
-    </section>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cash Register</title>
+  </head>
+  <body>
+    <div>
+      <h1>Cash Register</h1>
+
+      <label for="billAmount">Enter Bill Amount</label>
+      <input type="number" class="billAmount" />
+      <button class="next1">Next</button><br />
+      <label for="cashGiven">Enter Given Cash</label>
+      <input type="number" class="cashGiven" /><br />
+      <button class="btnCheck">Check</button><br /><br />
+    </div>
+    <h3>Amount to be Return</h3>
+    <table class="table">
+      <tr>
+        <th>No of Notes</th>
+        <td class="notes"></td>
+        <td class="notes"></td>
+        <td class="notes"></td>
+        <td class="notes"></td>
+        <td class="notes"></td>
+        <td class="notes"></td>
+        <td class="notes"></td>
+      </tr>
+
+      <tr>
+        <th>Currencies</th>
+        <td>2000</td>
+        <td>500</td>
+        <td>100</td>
+        <td>20</td>
+        <td>10</td>
+        <td>5</td>
+        <td>1</td>
+      </tr>
+    </table>
+    <div class="output"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
