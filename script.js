@@ -11,9 +11,6 @@ const message = document.querySelector(".output");
 const currencies = [2000, 500, 100, 20, 10, 5, 1];
 
 function start() {
-  let bill = 0;
-  let cash = 0;
-  let Notes = 0;
   billAmount.value = "";
   cashGiven.value = "";
   btnCheck.style.display = "none";
@@ -24,16 +21,16 @@ function start() {
 
 function calcNoOfNotes(RemainingAmt) {
   for (let i = 0; i < currencies.length; i++) {
-    Notes = Math.trunc(RemainingAmt / currencies[i]);
-    console.log("Before all: " + currencies[i] + ":" + Notes, RemainingAmt);
+    const Notes = Math.trunc(RemainingAmt / currencies[i]);
+    // console.log("Before all: " + currencies[i] + ":" + Notes, RemainingAmt);
     RemainingAmt %= currencies[i];
     noOfNotes[i].innerText = Notes;
-    console.log("After all: " + currencies[i] + ":" + Notes, RemainingAmt);
+    // console.log("After all: " + currencies[i] + ":" + Notes, RemainingAmt);
   }
 }
 
 next1.addEventListener("click", function () {
-  bill = billAmount.value;
+  const bill = billAmount.value;
 
   if (bill > 0) {
     btnCheck.style.display = "inline";
@@ -47,11 +44,11 @@ next1.addEventListener("click", function () {
 });
 
 btnCheck.addEventListener("click", function () {
-  bill = billAmount.value;
-  cash = cashGiven.value;
+  const bill = Number(billAmount.value);
+  const cash = Number(cashGiven.value);
   if (bill > 0 && cash > 0) {
-    if (cash >= bill) {
-      let amountToReturn = cash - bill;
+    if (bill <= cash) {
+      const amountToReturn = cash - bill;
       calcNoOfNotes(amountToReturn);
       message.innerText = "";
     } else {
