@@ -1,16 +1,19 @@
 const billAmount = document.querySelector(".billAmount");
 const cashGiven = document.querySelector("#cashGiven");
+const firstPart = document.querySelector(".firstPart");
+const secondPart = document.querySelector(".secondPart");
 const btnCheck = document.querySelector(".btnCheck");
 const next1 = document.querySelector(".next1");
 const noOfNotes = document.querySelectorAll(".notes");
 const message = document.querySelector(".output");
 
 const currencies = [2000, 500, 100, 20, 10, 5, 1];
-const bill = 0;
-const cash = 0;
+// const bill = 0;
+// const cash = 0;
 
 btnCheck.style.display = "none";
 cashGiven.style.display = "none";
+secondPart.style.display = "none";
 
 function calcNoOfNotes(RemainingAmt) {
   for (let i = 0; i < currencies.length; i++) {
@@ -24,11 +27,12 @@ function calcNoOfNotes(RemainingAmt) {
 
 next1.addEventListener("click", function () {
   const bill = billAmount.value;
-  const cash = cashGiven.value;
+
   if (bill > 0) {
     btnCheck.style.display = "block";
     cashGiven.style.display = "block";
     next1.style.display = "none";
+    secondPart.style.display = "block";
     message.innerText = "";
   } else {
     message.innerText = "Enter a valid bill amount";
