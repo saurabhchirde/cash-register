@@ -52,10 +52,12 @@ btnCheck.addEventListener("click", function () {
       calcNoOfNotes(amountToReturn);
       message.innerText = "";
     } else {
-      message.innerText = "Cash given is less than Bill, give more";
+      message.innerText =
+        "Cash given is less than the bill amount, do you want to wash some plates 🤨 ?";
     }
   } else {
-    message.innerText = "Enter valid amounts";
+    message.innerText =
+      "I am watching you! Amount cannot be less than zero 😏  enter a valid amount";
   }
 });
 
