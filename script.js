@@ -1,5 +1,5 @@
 const billAmount = document.querySelector(".billAmount");
-const cashGiven = document.querySelector("#cashGiven");
+const cashGiven = document.querySelector(".cashGiven");
 const firstPart = document.querySelector(".firstPart");
 const secondPart = document.querySelector(".secondPart");
 const btnCheck = document.querySelector(".btnCheck");
