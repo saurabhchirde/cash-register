@@ -1,0 +1,29 @@
+.check {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.billAmount,
+#cashGiven,
+.output {
+  width: 50%;
+  display: block;
+  margin: 1rem auto 1rem auto;
+  text-align: center;
+}
+
+.next1,
+.btnCheck {
+  display: block;
+  margin: 1rem auto 1rem auto;
+  text-align: center;
+}
+table {
+  border: 1px solid;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+}

@@ -1,8 +1,9 @@
 const billAmount = document.querySelector(".billAmount");
-const cashGiven = document.querySelector(".cashGiven");
+const cashGiven = document.querySelector("#cashGiven");
 const btnCheck = document.querySelector(".btnCheck");
 const next1 = document.querySelector(".next1");
 const noOfNotes = document.querySelectorAll(".notes");
+const message = document.querySelector(".output");
 
 const currencies = [2000, 500, 100, 20, 10, 5, 1];
 const bill = 0;
@@ -27,8 +28,10 @@ next1.addEventListener("click", function () {
   if (bill > 0) {
     btnCheck.style.display = "block";
     cashGiven.style.display = "block";
+    next1.style.display = "none";
+    message.innerText = "";
   } else {
-    console.log("Enter a valid bill amount");
+    message.innerText = "Enter a valid bill amount";
   }
 });
 
@@ -39,10 +42,11 @@ btnCheck.addEventListener("click", function () {
     if (cash >= bill) {
       let amountToReturn = cash - bill;
       calcNoOfNotes(amountToReturn);
+      message.innerText = "";
     } else {
-      console.log("Cash given is less than Bill, give more");
+      message.innerText = "Cash given is less than Bill, give more";
     }
   } else {
-    console.log("Enter valid amounts");
+    message.innerText = "Enter valid amounts";
   }
 });

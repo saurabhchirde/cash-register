@@ -8,16 +8,17 @@
     <title>Cash Register</title>
   </head>
   <body>
-    <div>
+    <div class="check">
       <h1>Cash Register</h1>
 
       <label for="billAmount">Enter Bill Amount</label>
       <input type="number" class="billAmount" />
       <button class="next1">Next</button><br />
       <label for="cashGiven">Enter Given Cash</label>
-      <input type="number" class="cashGiven" /><br />
+      <input type="number" id="cashGiven" /><br />
       <button class="btnCheck">Check</button><br /><br />
     </div>
+    <div class="output"></div>
     <h3>Amount to be Return</h3>
     <table class="table">
       <tr>
@@ -42,7 +43,7 @@
         <td>1</td>
       </tr>
     </table>
-    <div class="output"></div>
+
     <script src="script.js"></script>
   </body>
 </html>
