@@ -16,8 +16,7 @@ html {
   text-align: center;
 }
 
-.next1,
-.btnCheck {
+.next1 {
   display: block;
   margin: 1rem auto 1rem auto;
   text-align: center;
@@ -26,6 +25,16 @@ html {
   border-color: white;
   font-size: 0.9rem;
 }
+.btnCheck,
+.btnClear {
+  margin: 1rem auto 1rem auto;
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border-color: white;
+  font-size: 0.9rem;
+}
+
 table {
   border: 1px solid;
   margin: auto;
