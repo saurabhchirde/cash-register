@@ -1,17 +1,29 @@
 html {
-  background-color: rgb(23, 216, 152);
+  background-color: rgb(185, 233, 217);
 }
 .check {
   width: 80%;
   margin: auto;
   text-align: center;
 }
-
+.firstPart,
+.secondPart {
+  background-color: rgb(16, 180, 126);
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+}
+label {
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: gray 0 0 10px;
+}
 .billAmount,
 .cashGiven,
 .output {
-  width: 50%;
+  width: 300px;
   display: block;
+  font-size: 1.5rem;
+  padding: 0.8rem 0;
   margin: 1rem auto 1rem auto;
   text-align: center;
 }
@@ -20,29 +32,36 @@ html {
   display: block;
   margin: 1rem auto 1rem auto;
   text-align: center;
-  padding: 5px 15px;
-  border-radius: 10px;
+  padding: 5px 132px;
+  border-radius: 20px;
   border-color: white;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  background-color: ;
 }
 .btnCheck,
 .btnClear {
   margin: 1rem auto 1rem auto;
   text-align: center;
-  padding: 5px 15px;
-  border-radius: 10px;
+  padding: 5px 50px;
+  border-radius: 20px;
   border-color: white;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 table {
   border: 1px solid;
   margin: auto;
 }
+.table {
+  font-size: 1.5rem;
+}
 
-h3 {
+h2 {
   text-align: center;
+  font-size: 1.8rem;
+  color: rgb(10, 109, 76);
 }
 h1 {
-  padding: 2rem 0 1rem 0;
+  padding: 1.5rem 0 0 0;
+  color: rgb(10, 109, 76);
 }
