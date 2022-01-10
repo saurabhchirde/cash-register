@@ -10,24 +10,22 @@ const message = document.querySelector(".output");
 
 const currencies = [2000, 500, 100, 20, 10, 5, 1];
 
-function start() {
+const start = () => {
   billAmount.value = "";
   cashGiven.value = "";
   btnCheck.style.display = "none";
   cashGiven.style.display = "none";
   secondPart.style.display = "none";
   next1.style.display = "block";
-}
+};
 
-function calcNoOfNotes(RemainingAmt) {
+const calcNoOfNotes = (RemainingAmt) => {
   for (let i = 0; i < currencies.length; i++) {
     const Notes = Math.trunc(RemainingAmt / currencies[i]);
-    // console.log("Before all: " + currencies[i] + ":" + Notes, RemainingAmt);
     RemainingAmt %= currencies[i];
     noOfNotes[i].innerText = Notes;
-    // console.log("After all: " + currencies[i] + ":" + Notes, RemainingAmt);
   }
-}
+};
 
 next1.addEventListener("click", function () {
   const bill = billAmount.value;
